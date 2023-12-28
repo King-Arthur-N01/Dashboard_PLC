@@ -21,7 +21,7 @@ class LoginController extends Controller
             'password' => 'required',
         ]);
         $credentials = $request->only('nik','password');
-        if (Auth::attempt($credentials)) { 
+        if (Auth::attempt($credentials)) {
             return redirect()->intended('home')->withSuccess('Signed in');
         }
         return redirect("login")->withSuccess('Login details are not valid');
