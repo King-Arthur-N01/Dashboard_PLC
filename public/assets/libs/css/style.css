@@ -1252,6 +1252,8 @@ Top Header
     border-right: 1px solid #e6e6f2;
 }
 
+li.nav-item {}
+
 .navbar-right-top .nav-item:last-child {
     border: none;
 }

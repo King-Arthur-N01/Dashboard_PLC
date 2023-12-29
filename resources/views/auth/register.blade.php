@@ -55,7 +55,7 @@
                 @enderror
                 <div class="form-group">
                     <input class="form-control form-control-lg" name="password_confirmation" type="password" placeholder="Confirm Password">
-                </div>
+                </div>  
 
                 <div class="form-group pt-2">
                     <button class="btn btn-block btn-primary" type="submit">Register My Account</button>

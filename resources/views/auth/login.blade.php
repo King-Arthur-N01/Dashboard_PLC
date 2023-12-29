@@ -38,11 +38,17 @@
                 <form action="{{ route('pushlogin') }}" method="post">
                     @csrf
                     <div class="form-group">
-                        <input class="form-control form-control-lg" name="nik" type="text" placeholder="NIK" autocomplete="off">
+                        <input class="form-control form-control-lg @error('nik') is-invalid @enderror" name="nik" type="text" placeholder="NIK" autocomplete="off">
                     </div>
+                    @error('nik')
+                        <strong>{{ $message }}</strong>
+                    @enderror
                     <div class="form-group">
-                        <input class="form-control form-control-lg" name="password" type="password" placeholder="Password">
+                        <input class="form-control form-control-lg @error('password') is-invalid @enderror" name="password" type="password" placeholder="Password">
                     </div>
+                    @error('password')
+                        <strong>{{ $message }}</strong>
+                    @enderror
                     {{-- <div class="form-group">
                         <label class="custom-control custom-checkbox">
                             <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Remember Me</span>
