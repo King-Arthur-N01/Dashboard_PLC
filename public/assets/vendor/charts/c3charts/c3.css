@@ -1,7 +1,10 @@
 /*-- Chart --*/
 .c3 svg {
-  font-size: 14px; font-family: 'Circular Std Book';
-  -webkit-tap-highlight-color:#71748d; fill: #71748d; }
+  font-size: 8px;
+  font-family: 'Circular Std Book';
+  -webkit-tap-highlight-color:#71748d;
+  fill: #71748d;
+  }
 
 .c3 path, .c3 line {
   fill: none;
@@ -96,7 +99,8 @@
    font-size: 14px; font-family: 'Circular Std Book'; }
 
 .c3-legend-item-hidden {
-  opacity: 0.15; }
+  opacity: 0.5;
+  }
 
 .c3-legend-background {
   opacity: 0.75;

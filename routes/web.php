@@ -25,4 +25,12 @@ Route::post('/login','Auth\LoginController@authenticateuser')->name('pushlogin')
 Route::get('/register','Auth\RegisterController@indexregistration')->name('register');
 Route::post('/register','Auth\RegisterController@authenticatecreate')->name('pushregister');
 
+Route::get('/monitoring','Monitoring\MonitoringController@readmonitor')->name('monitoring');
+// Route::post('/monitoring','Montoring\MonitoringController@createmonitor')->name('pushmonitor');
+
+Route::get('/datatable','Monitoring\DatatableController@readtable')->name('datatable');
+
+Route::get('/account','Account\UseraccountController@readuser')->name('account');
+Route::post('/account','Account\UseraccountController@createuser')->name('createaccount');
+
 Route::get('/logout','Auth\LoginController@signout')->name('logout');

@@ -293,10 +293,63 @@
                 }
             });
         }
-
-        if ($('#c3chart_donut').length) {
+// <<<====================INI BATAS !!!=======================>>>
+        if ($('#c3chart_donut1').length) {
             var chart = c3.generate({
-                bindto: "#c3chart_donut",
+                bindto: "#c3chart_donut1",
+                data: {
+                    columns: [
+                        ['data1', 60],
+                        ['data2', 10],
+                        ['data3', 30]
+                    ],
+                    type: 'donut',
+                    onclick: function(d, i) { console.log("onclick", d, i); },
+                    onmouseover: function(d, i) { console.log("onmouseover", d, i); },
+                    onmouseout: function(d, i) { console.log("onmouseout", d, i); },
+
+                    colors: {
+                        data1: '#5969ff',
+                        data2: '#ff407b',
+                        data3: '#00ffff'
+
+                    }
+                },
+                donut: {
+                    title: "CNC Machine 1"
+
+                }
+
+            });
+            setTimeout(function() {
+                chart.load({
+                    columns: [
+                        ["Data 1", $data1],
+                        ["Data 2", $data2],
+                        ["Data 3", $data3],
+                    ]
+                });
+            }, 1500);
+
+            setTimeout(function() {
+                chart.unload({
+                    ids: 'data1'
+                });
+                chart.unload({
+                    ids: 'data2'
+                });
+                chart.unload({
+                    ids: 'data3'
+                });
+
+            }, 2500);
+        }
+
+        // =====ini batas chart=====
+
+        if ($('#c3chart_donut2').length) {
+            var chart = c3.generate({
+                bindto: "#c3chart_donut2",
                 data: {
                     columns: [
                         ['data1', 30],
@@ -308,18 +361,16 @@
                     onmouseout: function(d, i) { console.log("onmouseout", d, i); },
 
                     colors: {
-                         data1: '#5969ff',
+                        data1: '#5969ff',
                         data2: '#ff407b'
 
 
                     }
                 },
                 donut: {
-                    title: "Iris Petal Width"
-
+                    title: "CNC Machine 2"
 
                 }
-
 
             });
 
@@ -342,6 +393,126 @@
                 });
             }, 2500);
         }
+
+        // =====ini batas chart=====
+
+        if ($('#c3chart_donut1').length) {
+            var chart = c3.generate({
+                bindto: "#c3chart_donut3",
+                data: {
+                    columns: [
+                        ['data1', 70],
+                        ['data2', 20],
+                        ['data3', 50]
+                    ],
+                    type: 'donut',
+                    onclick: function(d, i) { console.log("onclick", d, i); },
+                    onmouseover: function(d, i) { console.log("onmouseover", d, i); },
+                    onmouseout: function(d, i) { console.log("onmouseout", d, i); },
+
+                    colors: {
+                        data1: '#5969ff',
+                        data2: '#ff407b',
+                        data3: '#00ffff'
+
+                    }
+                },
+                donut: {
+                    title: "CNC Machine 3"
+
+                }
+
+            });
+            setTimeout(function() {
+                chart.load({
+                    columns: [
+                        ["setosa", 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.1, 0.2, 0.4, 0.4, 0.3, 0.3, 0.3, 0.2, 0.4, 0.2, 0.5, 0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.2, 0.4, 0.1, 0.2, 0.2, 0.2, 0.2, 0.1, 0.2, 0.2, 0.3, 0.3, 0.2, 0.6, 0.4, 0.3, 0.2, 0.2, 0.2, 0.2],
+                        ["versicolor", 1.4, 1.5, 1.5, 1.3, 1.5, 1.3, 1.6, 1.0, 1.3, 1.4, 1.0, 1.5, 1.0, 1.4, 1.3, 1.4, 1.5, 1.0, 1.5, 1.1, 1.8, 1.3, 1.5, 1.2, 1.3, 1.4, 1.4, 1.7, 1.5, 1.0, 1.1, 1.0, 1.2, 1.6, 1.5, 1.6, 1.5, 1.3, 1.3, 1.3, 1.2, 1.4, 1.2, 1.0, 1.3, 1.2, 1.3, 1.3, 1.1, 1.3],
+                        ["virginica", 2.5, 1.9, 2.1, 1.8, 2.2, 2.1, 1.7, 1.8, 1.8, 2.5, 2.0, 1.9, 2.1, 2.0, 2.4, 2.3, 1.8, 2.2, 2.3, 1.5, 2.3, 2.0, 2.0, 1.8, 2.1, 1.8, 1.8, 1.8, 2.1, 1.6, 1.9, 2.0, 2.2, 1.5, 1.4, 2.3, 2.4, 1.8, 1.8, 2.1, 2.4, 2.3, 1.9, 2.3, 2.5, 2.3, 1.9, 2.0, 2.3, 1.8],
+                    ]
+                });
+            }, 1500);
+
+            setTimeout(function() {
+                chart.unload({
+                    ids: 'data1'
+                });
+                chart.unload({
+                    ids: 'data2'
+                });
+                chart.unload({
+                    ids: 'data3'
+                });
+            }, 2500);
+        }
+
+        // =====ini batas chart=====
+
+        if ($('#c3chart_donut4').length) {
+            var chart = c3.generate({
+                bindto: "#c3chart_donut4",
+                data: {
+                    columns: [
+                        ['data1', 80],
+                        ['data2', 30],
+                        ['data3', 70],
+                        ['data4', 50],
+                        ['data5', 10]
+                    ],
+                    type: 'donut',
+                    onclick: function(d, i) { console.log("onclick", d, i); },
+                    onmouseover: function(d, i) { console.log("onmouseover", d, i); },
+                    onmouseout: function(d, i) { console.log("onmouseout", d, i); },
+
+                    colors: {
+                        data1: '#5969ff',
+                        data2: '#ff407b',
+                        data3: '#00ffff',
+                        data4: '#d92326',
+                        data5: '#f5f51b'
+
+                    }
+                },
+                donut: {
+                    title: "CNC Machine 4"
+
+                }
+
+            });
+            setTimeout(function() {
+                chart.load({
+                    columns: [
+                        ["Data 1", data1],
+                        ["Data 2", data2],
+                        ["Data 3", data3],
+                        ["Data 4", data4],
+                        ["Data 5", data5],
+                    ]
+                });
+            }, 1500);
+
+            setTimeout(function() {
+                chart.unload({
+                    ids: 'data1'
+                });
+                chart.unload({
+                    ids: 'data2'
+                });
+                chart.unload({
+                    ids: 'data3'
+                });
+                chart.unload({
+                    ids: 'data4'
+                });
+                chart.unload({
+                    ids: 'data5'
+                });
+
+            }, 2500);
+        }
+
+
+// <<<====================INI BATAS !!!=======================>>>
 
         if ($('#c3chart_gauge').length) {
             var chart = c3.generate({
