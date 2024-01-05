@@ -29,6 +29,9 @@ Route::get('/monitoring','Monitoring\MonitoringController@readmonitor')->name('m
 // Route::post('/monitoring','Montoring\MonitoringController@createmonitor')->name('pushmonitor');
 
 Route::get('/datatable','Monitoring\DatatableController@readtable')->name('datatable');
+// Route::post('/datatable','Monitoring\DatatableController@createtable')->name('createdatatable');
+
+Route::get('/manageuser','Account\UsertableController@readusertable')->name('manageuser');
 
 Route::get('/account','Account\UseraccountController@readuser')->name('account');
 Route::post('/account','Account\UseraccountController@createuser')->name('createaccount');

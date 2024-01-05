@@ -17,7 +17,7 @@ class HomeController extends Controller
     }
     public function homeindex()
     {
-        return view('dashboard.monitoring.readmonitor');
+        return view('dashboard.monitoring.home');
     }
     // public function about()
     // {
