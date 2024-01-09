@@ -35,5 +35,6 @@ Route::get('/manageuser','Account\UsertableController@readusertable')->name('man
 
 Route::get('/account','Account\UseraccountController@readuser')->name('account');
 Route::post('/account','Account\UseraccountController@createuser')->name('createaccount');
+Route::get('/userdelete/{$id}','Account\UseraccountController@deleteuser')->name('deleteaccount');
 
 Route::get('/logout','Auth\LoginController@signout')->name('logout');

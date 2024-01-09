@@ -339,7 +339,8 @@ button.btn-primary {}
 address {}
 
 .form-group {
-    margin-bottom: 12px;
+    margin: 15px;
+    /* margin-bottom: 12px; */
 }
 
 .form-control-lg {

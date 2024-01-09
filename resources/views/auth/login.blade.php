@@ -54,15 +54,15 @@
                             <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Remember Me</span>
                         </label>
                     </div> --}}
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block mt-4">Sign in</button>
                 </form>
             </div>
-            <div class="card-footer bg-white p-0  ">
+            {{-- <div class="card-footer bg-white p-0  ">
                 <div class="card-footer-item card-footer-item-bordered">
                     <a href="{{ route('register') }}" class="footer-link">Create An Account</a></div>
                 <div class="card-footer-item card-footer-item-bordered">
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
     <!-- ============================================================== -->

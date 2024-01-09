@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Auth\Events\Authenticated;
 class HomeController extends Controller
 {
     /**
