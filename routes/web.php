@@ -31,10 +31,11 @@ Route::get('/monitoring','Monitoring\MonitoringController@readmonitor')->name('m
 Route::get('/datatable','Monitoring\DatatableController@readtable')->name('datatable');
 // Route::post('/datatable','Monitoring\DatatableController@createtable')->name('createdatatable');
 
+// <======================== Admin panel dashboard route configuration ========================>
 Route::get('/manageuser','Account\UsertableController@readusertable')->name('manageuser');
 
 Route::get('/account','Account\UseraccountController@readuser')->name('account');
 Route::post('/account','Account\UseraccountController@createuser')->name('createaccount');
 Route::get('/userdelete/{$id}','Account\UseraccountController@deleteuser')->name('deleteaccount');
-
+// <======================== Admin panel dashboard route configuration ========================>
 Route::get('/logout','Auth\LoginController@signout')->name('logout');

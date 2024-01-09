@@ -173,6 +173,7 @@
                                                     </li>
                                                 </ul>
                                             </div>
+                                            @can('view selection', Post::class)
                                             <li class="nav-item ">
                                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>User Setting</a>
                                                 <div id="submenu-4" class="collapse submenu" style="">
@@ -183,6 +184,7 @@
                                                     </ul>
                                                 </div>
                                             </li>
+                                            @endcan
                                             {{-- ==========================tempat untuk table sebelah kiri========================== --}}
                                         </li>
                                     </ul>

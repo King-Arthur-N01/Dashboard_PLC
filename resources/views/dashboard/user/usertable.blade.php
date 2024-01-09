@@ -47,7 +47,7 @@
                                 <tr>
                                     <th>Name</th>
                                     <th>NIK</th>
-                                    <th>Departement</th>
+                                    <th>Password</th>
                                     <th>Create Date</th>
                                     <th>Action</th>
                                 </tr>
@@ -57,8 +57,8 @@
                                 <tr>
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->nik}}</td>
-                                    <td>{{$user->departement}}</td>
-                                    <td>{{$user->create_date}}</td>
+                                    <td>{{$user->password}}</td>
+                                    <td>{{$user->created_at}}</td>
                                     <td><a></a></td>
                                 </tr>
                                 @endforeach
