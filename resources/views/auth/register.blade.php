@@ -47,8 +47,9 @@
                 <div class="form-group">
                     <input class="form-control form-control-lg" type="text" name="nik" required placeholder="NIK" autocomplete="off">
                 </div>
-                <div class="form-group">
-                    <input class="form-control form-control-lg" type="password" name="password" required placeholder="Password Min:6 digits">
+                <div class="form-group input-group-append">
+                    <input class="form-control form-control-lg" type="password" name="password" required placeholder="Password Min:6 digits" id="password">
+                    <button type="button" class="btn btn-outline-primary fas fa-eye" id="toggler"></button>
                 </div>
                 @error('password')
                 <strong>{{$message}}</strong>
@@ -70,3 +71,18 @@
     </form>
 </body>
 </html>
+
+<script>
+    var password = document.getElementById('password');
+    var toggler = document.getElementById('toggler');
+    showHidePassword = () => {
+    if (password.type == 'password') {
+    password.setAttribute('type', 'text');
+    toggler.classList.add('fa-eye-slash');
+    } else {
+    toggler.classList.remove('fa-eye-slash');
+    password.setAttribute('type', 'password');
+    }
+    };
+    toggler.addEventListener('click', showHidePassword);
+</script>

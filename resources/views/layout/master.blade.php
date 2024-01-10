@@ -10,6 +10,8 @@
     <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/libs/css/style.css">
     <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/simple-line-icons/css/simple-line-icons.css">
     <link rel="stylesheet" href="assets/vendor/charts/chartist-bundle/chartist.css">
     <link rel="stylesheet" href="assets/vendor/charts/morris-bundle/morris.css">
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
@@ -38,12 +40,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto navbar-right-top">
-                        <li class="nav-item" width="350px">
-                            <div id="custom-search" class="top-search-bar">
-                                <input class="form-control" type="text" placeholder="Search..">
-                            </div>
-                        </li>
+                    <ul class="navbar-nav navbar-right-top" style="margin-left: auto">
                         <li class="nav-item dropdown notification">
                             <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
                             <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
@@ -123,17 +120,19 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/icons/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <a class="nav-link nav-user-img nav-user-name" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/icons/avatar-2.png" alt="" class="user-avatar-md rounded-circle"> {{Auth::user()->name}} </a>
+                            {{-- <a class="status">{{Auth::user()->department}}</a> --}}
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
                                     <h5 class="mb-0 text-white nav-user-name">Selamat Datang {{Auth::user()->name}}</h5>
-                                    <span class="status"></span><span class="ml-2">Available</span>
+                                    <span class="status"></span><span class="ml-2">{{Auth::user()->department}}</span>
                                 </div>
                                 <a class="dropdown-item" href="{{ route('account')}}"><i class="fas fa-user mr-2"></i>Account</a>
                                 <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
                                 <a class="dropdown-item" href="{{ route('logout')}}"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
                         </li>
+
                     </ul>
                 </div>
             </nav>
@@ -147,48 +146,44 @@
         <div class="nav-left-sidebar sidebar-dark">
             <div class="menu-list">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav flex-column">
                             <li class="nav-divider">
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
-                                <div id="submenu-1" class="collapse submenu" style="">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            {{-- ==========================tempat untuk table sebelah kiri========================== --}}
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Tables</a>
-                                            <div id="submenu-5" class="collapse submenu" style="">
-                                                <ul class="nav flex-column">
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="#">General Tables</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="{{ route('datatable')}}">Data Tables</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            @can('view selection', Post::class)
-                                            <li class="nav-item ">
-                                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>User Setting</a>
-                                                <div id="submenu-4" class="collapse submenu" style="">
-                                                    <ul class="nav flex-column">
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="{{ route('manageuser')}}">Manage User</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                {{-- ========================== tempat untuk table sebelah kiri ========================== --}}
+                                <a class="nav-link active" href="#"><i class="fas fa-fw fa-home"></i>Dashboard</a>
+                                {{-- ========================== batas menu ========================== --}}
+                                <div>
+                                    <a class="nav-link" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1"><i class="fas fa-fw fa-table"></i>Tables</a>
+                                    <div id="submenu-1" class="collapse submenu" style="">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">General Tables</a>
                                             </li>
-                                            @endcan
-                                            {{-- ==========================tempat untuk table sebelah kiri========================== --}}
-                                        </li>
-                                    </ul>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ route('datatable')}}">Data Tables</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
+                                {{-- ========================== batas menu ========================== --}}
+                                <div>
+                                    <a class="nav-link" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2"><i class="ti-settings"></i>Setting</a>
+                                    <div id="submenu-2" class="collapse submenu" style="">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                @can('view selection', Post::class)
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="{{ route('manageuser')}}">Manage User</a>
+                                                    </li>
+                                                @endcan
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                {{-- ========================== tempat untuk table sebelah kiri ========================== --}}
                             </li>
                         </ul>
                     </div>

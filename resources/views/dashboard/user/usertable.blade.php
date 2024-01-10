@@ -57,7 +57,7 @@
                                 <tr>
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->nik}}</td>
-                                    <td>{{$user->password}}</td>
+                                    <td>{{$user->department}}</td>
                                     <td>{{$user->created_at}}</td>
                                     <td><a></a></td>
                                 </tr>

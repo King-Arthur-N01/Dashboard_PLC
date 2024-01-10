@@ -11,7 +11,6 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a class="breadcrumb-link">Dashboard</a></li>
-                        <li class="breadcrumb-item"><a class="breadcrumb-link">Tables</a></li>
                         <li class="breadcrumb-item active" aria-current="page">General Tables</li>
                     </ol>
                 </nav>

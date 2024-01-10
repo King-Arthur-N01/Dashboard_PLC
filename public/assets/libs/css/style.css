@@ -260,7 +260,7 @@ label {
     background-color: #fff;
     background-image: none;
     border: 1px solid #d2d2e4;
-    border-radius: 2px;
+    border-radius: 8px;
 }
 
 .form-control:focus {
@@ -1264,6 +1264,7 @@ li.nav-item {}
     font-size: 16px;
     line-height: 2;
     color: #82849f;
+    user-select: none;
 }
 
 
@@ -1461,7 +1462,11 @@ li.nav-item {}
 
 /* ----- User Nav Dropdown -----*/
 
-.nav-user {}
+.nav-user {
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
 
 .nav-user-dropdown {
     padding: 0px;
@@ -1961,8 +1966,8 @@ Splash Container / Wrapper
 
 .splash-container {
     width: 100%;
-    max-width: 375px;
-    padding: 15px;
+    max-width: 550px;
+    /* padding: 15px; */
     margin: auto;
 }
 
@@ -2609,8 +2614,8 @@ clip-path: polygon(10% 25%, 10% 0, 35% 0%, 65% 0%, 90% 0, 90% 25%, 90% 50%, 91% 
 
 .btn {
     font-size: 14px;
-    padding: 9px 16px;
-    border-radius: 2px;
+    padding: 8px 14px;
+    /* border-radius: 30px; */
 }
 
 .btn-wishlist {
@@ -2695,9 +2700,8 @@ clip-path: polygon(10% 25%, 10% 0, 35% 0%, 65% 0%, 90% 0, 90% 25%, 90% 50%, 91% 
 /*--- btn secondary --*/
 
 .btn-secondary {
-    color: #fff;
-    background-color: #ff407b;
-    border-color: #ff407b;
+    /* color: #fff; */
+    border-color: #5969ff;
 }
 
 .btn-secondary:hover {
@@ -2919,8 +2923,8 @@ clip-path: polygon(10% 25%, 10% 0, 35% 0%, 65% 0%, 90% 0, 90% 25%, 90% 50%, 91% 
 /*--- btn outline primary --*/
 
 .btn-outline-primary {
-    color: #5969ff;
-    background-color: transparent;
+    color: #ffffff;
+    background-color: #5969ff;
     border-color: #5969ff;
 }
 
@@ -3206,7 +3210,7 @@ btn-link
 -------------------------*/
 
 .card {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     border: none;
     -webkit-box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
     -moz-box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
