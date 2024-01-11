@@ -24,9 +24,14 @@ class RegisterController extends Controller
     {
         return view('auth.register');
     }
+// <============================= HATI-HATI KHUSUS DEBUGING =============================>
+    public function indexregistrationold()
+    {
+        return view('auth.registerold');
+    }
+// <============================= HATI-HATI KHUSUS DEBUGING =============================>
     public function authenticatecreate(Request $request)
     {
-        // dd($request);
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'nik' => ['required', 'string', 'unique:users'],

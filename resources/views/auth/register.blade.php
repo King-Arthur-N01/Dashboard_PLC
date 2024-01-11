@@ -1,88 +1,114 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/vendor/fonts/circular-std/style.css">
-    <link rel="stylesheet" href="../assets/libs/css/style.css">
-    <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
-    <style>
-    html,
-    body {
-        height: 100%;
-    }
-    body {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-    </style>
-</head>
-<!-- ============================================================== -->
-<!-- signup form  -->
-<!-- ============================================================== -->
+@extends('layout.master')
 
-<body>
-    <!-- ============================================================== -->
-    <!-- signup form  -->
-    <!-- ============================================================== -->
-    <form class="splash-container" action="{{ route('pushregister') }}" method="post">
-        @csrf
-        <div class="card">
-            <div class="card-header">
-                <h3 class="mb-1">Registrations Form</h3>
-                <p>Please enter your user information.</p>
-            </div>
-            <div class="card-body">
-                <div class="form-group">
-                    <input class="form-control form-control-lg" type="text" name="name" required placeholder="Username" autocomplete="off">
+@section('content')
+    <div class="container-fluid  dashboard-content">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="page-header" id="top">
+                    <h2 class="pageheader-title">Form Elements </h2>
+                    <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet
+                        vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                    <div class="page-breadcrumb">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a class="breadcrumb-link">Dashboard</a></li>
+                                <li class="breadcrumb-item"><a class="breadcrumb-link">Forms</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Form Elements</li>
+                            </ol>
+                        </nav>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input class="form-control form-control-lg" type="text" name="nik" required placeholder="NIK" autocomplete="off">
-                </div>
-                <div class="form-group input-group-append">
-                    <input class="form-control form-control-lg" type="password" name="password" required placeholder="Password Min:6 digits" id="password">
-                    <button type="button" class="btn btn-outline-primary fas fa-eye" id="toggler"></button>
-                </div>
-                @error('password')
-                <strong>{{$message}}</strong>
-                @enderror
-                <div class="form-group">
-                    <input class="form-control form-control-lg" name="password_confirmation" type="password" placeholder="Confirm Password">
-                </div>
-
-                <div class="form-group pt-2">
-                    <button class="btn btn-block btn-primary" type="submit">Register My Account</button>
-                </div>
-                {{-- <div class="form-group">
-                    <label class="custom-control custom-checkbox">
-                        <input class="custom-control-input" type="checkbox"><span class="custom-control-label">By creating an account, you agree the <a href="#">terms and conditions</a></span>
-                    </label>
-                </div> --}}
             </div>
         </div>
-    </form>
-</body>
-</html>
+        <div class="row">
+            <!-- ============================================================== -->
+            <!-- valifation types -->
+            <!-- ============================================================== -->
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="card">
+                    <h5 class="card-header">Form Pendaftaran</h5>
+                    <div class="card-body">
+                        <form id="validationform" data-parsley-validate="" novalidate="">
+                            <div class="row" align-items="center">
+                                <div class="col-xl-6">
+                                    <div class="form-group">
+                                        <label class="col-form-label text-sm-right" style="margin-left: 4px;">Nama User</label>
+                                        <div>
+                                            <input type="text" required="" placeholder="Username" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="form-group">
+                                        <label class="col-form-label text-sm-right" style="margin-left: 4px;">NIK</label>
+                                        <div>
+                                            <input type="text" required="" data-parsley-maxlength="5" placeholder="NIK" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" align-items="center">
+                                <div class="col-xl-6">
+                                    <div class="form-group">
+                                        <label class="col-form-label text-sm-right" style="margin-left: 4px;">Password</label>
+                                        <div>
+                                            <input class="form-control form-control-lg" type="password" name="password" required placeholder="Password Min:6 digits" id="password">
+                                            <button class="btn btn-outline-primary fas fa-eye" id="toggler"></button>
+                                        </div>
+                                        @error('password')
+                                        <strong>{{ $message }}</strong>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="form-group ">
+                                        <label class="col-form-label text-sm-right" style="margin-left: 4px;">Confirm Password</label>
+                                        <div>
+                                            <input class="form-control form-control-lg" name="password_confirmation" type="password" placeholder="Confirm Password" id="confirm_password">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h4>Department</h4>
+                                <form>
+                                    <label class="custom-control custom-radio">
+                                        <input type="radio" name="radio-stacked" checked=""
+                                            class="custom-control-input"><span
+                                            class="custom-control-label">Engginering</span>
+                                    </label>
+                                    <label class="custom-control custom-radio">
+                                        <input type="radio" name="radio-stacked" checked=""
+                                            class="custom-control-input"><span class="custom-control-label">IT</span>
+                                    </label>
+                                    <label class="custom-control custom-radio">
+                                        <input type="radio" name="radio-stacked" checked=""
+                                            class="custom-control-input"><span class="custom-control-label">Assembly</span>
+                                    </label>
+                                    <label class="custom-control custom-radio">
+                                        <input type="radio" name="radio-stacked" checked=""
+                                            class="custom-control-input"><span class="custom-control-label">Pressing</span>
+                                    </label>
+                                    <label class="custom-control custom-radio">
+                                        <input type="radio" name="radio-stacked" checked=""
+                                            class="custom-control-input"><span class="custom-control-label">Wealding</span>
+                                    </label>
+                                    <label class="custom-control custom-radio">
+                                        <input type="radio" name="radio-stacked" checked=""
+                                            class="custom-control-input"><span class="custom-control-label">Spot</span>
+                                    </label>
+                                </form>
+                            </div>
 
-<script>
-    var password = document.getElementById('password');
-    var toggler = document.getElementById('toggler');
-    showHidePassword = () => {
-    if (password.type == 'password') {
-    password.setAttribute('type', 'text');
-    toggler.classList.add('fa-eye-slash');
-    } else {
-    toggler.classList.remove('fa-eye-slash');
-    password.setAttribute('type', 'password');
-    }
-    };
-    toggler.addEventListener('click', showHidePassword);
-</script>
+                            <div class="form-group row text-right">
+                                <div class="col col-sm-10 col-lg-9 offset-sm-1 offset-lg-0">
+                                    <button type="submit" class="btn btn-space btn-primary">Submit</button>
+                                    <button class="btn btn-space btn-secondary">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endsection

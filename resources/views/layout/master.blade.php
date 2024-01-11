@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/dataTables.bootstrap4.css">
-    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/buttons.bootstrap4.css">
-    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/select.bootstrap4.css">
-    <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/fixedHeader.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/datatables/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/datatables/css/buttons.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/datatables/css/select.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/datatables/css/fixedHeader.bootstrap4.css">
     <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
 </head>
 
@@ -252,6 +252,27 @@
     <script src="https://cdn.datatables.net/rowgroup/1.0.4/js/dataTables.rowGroup.min.js"></script>
     <script src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
     <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
+    <script src="assets/vendor/inputmask/js/jquery.inputmask.bundle.js"></script>
+
+{{-- <=========================BATAS HARDCODED JAVASCRIPT!!!!=========================> --}}
+    <script>
+        $(document).ready(function(){
+            const passwordInput = document.getElementById('password');
+            const passwordEye = document.getElementById('toggler');
+            passwordEye.addEventListener('click', () => {
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    passwordEye.classList.add('fa-eye-slash');
+                    passwordEye.classList.remove('fa-eye');
+                } else {
+                    passwordInput.type = 'password';
+                    passwordEye.classList.add('fa-eye');
+                    passwordEye.classList.remove('fa-eye-slash');
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>

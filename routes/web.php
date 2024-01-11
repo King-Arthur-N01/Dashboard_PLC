@@ -39,3 +39,9 @@ Route::post('/account','Account\UseraccountController@createuser')->name('create
 Route::get('/userdelete/{$id}','Account\UseraccountController@deleteuser')->name('deleteaccount');
 // <======================== Admin panel dashboard route configuration ========================>
 Route::get('/logout','Auth\LoginController@signout')->name('logout');
+
+
+// <============================= HATI-HATI KHUSUS DEBUGING =============================>
+
+
+Route::get('/registerold','Auth\RegisterController@indexregistrationold');
