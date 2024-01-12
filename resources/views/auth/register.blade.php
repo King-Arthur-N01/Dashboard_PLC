@@ -34,7 +34,7 @@
                                     <div class="form-group">
                                         <label class="col-form-label text-sm-right" style="margin-left: 4px;">Nama User</label>
                                         <div>
-                                            <input type="text" required="" placeholder="Username" class="form-control">
+                                            <input class="form-control form-control-lg" type="text" required="" placeholder="Username">
                                         </div>
                                     </div>
                                 </div>
@@ -42,7 +42,7 @@
                                     <div class="form-group">
                                         <label class="col-form-label text-sm-right" style="margin-left: 4px;">NIK</label>
                                         <div>
-                                            <input type="text" required="" data-parsley-maxlength="5" placeholder="NIK" class="form-control">
+                                            <input class="form-control form-control-lg" type="text" required="" data-parsley-maxlength="5" placeholder="NIK">
                                         </div>
                                     </div>
                                 </div>
@@ -50,10 +50,11 @@
                             <div class="row" align-items="center">
                                 <div class="col-xl-6">
                                     <div class="form-group">
-                                        <label class="col-form-label text-sm-right" style="margin-left: 4px;">Password</label>
                                         <div>
-                                            <input class="form-control form-control-lg" type="password" name="password" required placeholder="Password Min:6 digits" id="password">
-                                            <button class="btn btn-outline-primary fas fa-eye" id="toggler"></button>
+                                            <label class="col-form-label text-sm-right" style="margin-left: 4px;">Password</label>
+                                            <div class="form-password-group">
+                                                <input class="form-password-control form-control-lg" type="password" name="password" required placeholder="Password Min:6 digits" id="password">
+                                            </div>
                                         </div>
                                         @error('password')
                                         <strong>{{ $message }}</strong>
@@ -61,10 +62,12 @@
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
-                                    <div class="form-group ">
-                                        <label class="col-form-label text-sm-right" style="margin-left: 4px;">Confirm Password</label>
+                                    <div class="form-group">
                                         <div>
-                                            <input class="form-control form-control-lg" name="password_confirmation" type="password" placeholder="Confirm Password" id="confirm_password">
+                                            <label class="col-form-label text-sm-right" style="margin-left: 4px;">Confirm Password</label>
+                                            <div class="form-password-group">
+                                            <input class="form-password-control form-control-lg" name="password_confirmation" type="password" placeholder="Confirm Password" id="confirm_password">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

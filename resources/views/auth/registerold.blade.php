@@ -45,12 +45,10 @@
             </div>
             <div class="card-body">
                 <div class="form-group">
-                    <input class="form-control form-control-lg" type="text" name="name" required
-                        placeholder="Username" autocomplete="off">
+                    <input class="form-control form-control-lg" type="text" name="name" required placeholder="Username" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <input class="form-control form-control-lg" type="text" name="nik" required placeholder="NIK"
-                        autocomplete="off">
+                    <input class="form-control form-control-lg" type="text" name="nik" required placeholder="NIK" autocomplete="off">
                 </div>
                 <div class="form-group input-group-append">
                     <input class="form-control form-control-lg" type="password" name="password" required placeholder="Password Min:6 digits" id="password">

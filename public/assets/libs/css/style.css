@@ -253,6 +253,53 @@ label {
 
 /* <==============================BATAS FORM==============================> */
 
+.form-password-style{
+    color: #555;
+    display: flex;
+    padding: 2px;
+    border: 1px solid currentColor;
+    border-radius: 5px;
+    margin: 0 0 30px;
+}
+
+.form-password-control {
+    display: inline-block;
+    width: 90%;
+    font-size: 14px;
+    /* line-height: 1.42857143; */
+    color: #71748d;
+    background: transparent;
+    border: 1px solid transparent;
+    margin: 0;
+    border-radius: 8px;
+}
+
+.form-password-control form:focus, .form-pasword-control form:active {
+    outline: none;
+}
+
+.form-password-control button {
+    width: 100%;
+    border: none;
+}
+
+.form-password-control-button {
+    padding: 5px;
+    margin: 0;
+    border-radius: inherit;
+    background: transparent;
+    border: 0px solid transparent;
+    cursor: pointer;
+}
+
+.form-password-control:focus {
+    color: #71748d;
+    background-color: #fff;
+    border-color: #a7a7f0;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(214, 214, 255, .75);
+}
+
 .form-control {
     display: inline-block;
     width: 100%;
@@ -260,8 +307,8 @@ label {
     line-height: 1.42857143;
     color: #71748d;
     background: transparent;
-    /* border: 1px solid #d2d2e4; */
-    /* border-radius: 8px; */
+    border: 1px solid #d2d2e4;
+    border-radius: 8px;
 }
 
 .form-control form:focus, .form-control form:active {
@@ -359,6 +406,13 @@ button.btn-default {}
 button.btn-primary {}
 
 address {}
+
+.form-password-group {
+    margin: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #d2d2e4;
+    border-radius: 8px;
+}
 
 .form-group {
     margin: 15px;
@@ -1988,7 +2042,7 @@ Splash Container / Wrapper
 
 .splash-container {
     width: 100%;
-    max-width: 365px;
+    max-width: 380px;
     /* padding: 15px; */
     margin: auto;
 }

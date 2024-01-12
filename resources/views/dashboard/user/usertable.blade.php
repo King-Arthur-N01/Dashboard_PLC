@@ -34,12 +34,9 @@
                 <h5 class="card-header">Basic Table</h5>
                     <div class="col-sm-12 col-md-12">
                         <div class="dt-buttons">
-                            <a class="btn btn-block btn-primary" href="{{ route('register') }}" tabindex="0" aria-controls="example">
-                                + Add User
-                            </a>
+                            <a class="btn btn-block btn-primary" href="{{ route('register') }}" tabindex="0" aria-controls="example">+ Add User</a>
                         </div>
                     </div>
-
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered first">

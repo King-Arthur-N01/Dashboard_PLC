@@ -43,19 +43,17 @@
                         alt="logo"></a><span class="splash-description">Please enter your user information.</span>
             </div>
             <div class="card-body">
-                <form action="{{ route('pushlogin') }}" method="post">
+                <form action="{{ route('pushlogin') }}" method="post" style="form-style">
                     @csrf
                     <div class="form-group">
-                        <input class="form-control form-control-lg @error('nik') is-invalid @enderror" name="nik"
-                            type="text" placeholder="NIK" autocomplete="off">
+                        <input class="form-control form-control-lg @error('nik') is-invalid @enderror" name="nik" type="text" placeholder="NIK" autocomplete="off">
                     </div>
                     @error('nik')
                         <strong>{{ $message }}</strong>
                     @enderror
-                    <div class="form-group">
-                        <input class="form-control form-control-lg @error('password') is-invalid @enderror"
-                            name="password" type="password" placeholder="Password">
-                        <button class="form-control-button fas fa-eye" id="toggler"></button>
+                    <div class="form-password-group">
+                        <input class="form-password-control form-control-lg @error('password') is-invalid @enderror" name="password" type="password" placeholder="Password" id="password">
+                        <button type="button" class="form-password-control-button fa fa-eye-slash" id="toggler"></button>
                     </div>
                     @error('password')
                     <strong>{{ $message }}</strong>
