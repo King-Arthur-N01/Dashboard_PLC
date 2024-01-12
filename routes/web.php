@@ -45,3 +45,4 @@ Route::get('/logout','Auth\LoginController@signout')->name('logout');
 
 
 Route::get('/registerold','Auth\RegisterController@indexregistrationold');
+Route::get('/debug','DebugController@indexdebug');
