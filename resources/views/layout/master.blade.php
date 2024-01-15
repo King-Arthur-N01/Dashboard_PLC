@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
     <link rel="stylesheet" href="assets/vendor/fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="assets/vendor/fonts/simple-line-icons/css/simple-line-icons.css">
-    <link rel="stylesheet" href="assets/vendor/charts/chartist-bundle/chartist.css">
-    <link rel="stylesheet" href="assets/vendor/charts/morris-bundle/morris.css">
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/vendor/charts/chartist-bundle/chartist.css">
+    <link rel="stylesheet" href="assets/vendor/charts/chartist-bundle/Chartistjs.jsChartistjs.js">
+    <link rel="stylesheet" href="assets/vendor/charts/morris-bundle/morris.css">
+    <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" type="text/css" href="assets/vendor/datatables/css/dataTables.bootstrap4.css">
     <link rel="stylesheet" type="text/css" href="assets/vendor/datatables/css/buttons.bootstrap4.css">
     <link rel="stylesheet" type="text/css" href="assets/vendor/datatables/css/select.bootstrap4.css">
@@ -153,17 +154,17 @@
                             </li>
                             <li class="nav-item ">
                                 {{-- ========================== tempat untuk table sebelah kiri ========================== --}}
-                                <a class="nav-link active" href="{{ route('home')}}"><i class="fas fa-fw fa-home"></i>Dashboard</a>
+                                <a class="nav-link active" href="{{route('home')}}"><i class="fas fa-fw fa-home"></i>Dashboard</a>
                                 {{-- ========================== batas menu ========================== --}}
                                 <div>
                                     <a class="nav-link" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1"><i class="fas fa-fw fa-table"></i>Tables</a>
                                     <div id="submenu-1" class="collapse submenu" style="">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="#">General Tables</a>
+                                                <a class="nav-link" href="{{route('monitoring')}}">System Info</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="{{ route('datatable')}}">Data Tables</a>
+                                                <a class="nav-link" href="{{route('datatable')}}">Data Tables</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -272,7 +273,7 @@
             });
         });
     </script>
-
+{{-- <=======================BATAS HARDCODED JAVASCRIPT END!!!!=======================> --}}
 </body>
 
 </html>

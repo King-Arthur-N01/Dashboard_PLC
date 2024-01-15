@@ -53,4 +53,13 @@
         </div>
     </div>
 </div>
+{{-- <<==============================chart bar!!!!==============================>> --}}
+<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+    <div class="card">
+        <h5 class="card-header">Horizontal Chart Bar</h5>
+        <div class="card-body">
+            <div class="ct-chart-horizontal ct-golden-section"></div>
+        </div>
+    </div>
+</div>
 @endsection

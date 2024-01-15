@@ -21,7 +21,7 @@ Route::get('/home','HomeController@homeindex')->name('home');
 
 Route::get('/login','Auth\LoginController@indexlogin')->name('login');
 Route::post('/login','Auth\LoginController@authenticateuser')->name('pushlogin');
-
+Route::get('/logout','Auth\LoginController@signout')->name('logout');
 Route::get('/register','Auth\RegisterController@indexregistration')->name('register');
 Route::post('/register','Auth\RegisterController@authenticatecreate')->name('pushregister');
 Route::get('/userdelete/{id}','Auth\RegisterController@deleteuser')->name('deleteaccount');
@@ -37,10 +37,9 @@ Route::get('/manageuser','Account\UsertableController@readusertable')->name('man
 
 Route::get('/account','Account\UseraccountController@readuser')->name('account');
 Route::post('/account','Account\UseraccountController@createuser')->name('createaccount');
-// Route::get('/userdelete/{$id}','Account\UseraccountController@deleteuser')->name('deleteaccount');
 
 // <====================== Admin panel dashboard route configuration end ======================>
-Route::get('/logout','Auth\LoginController@signout')->name('logout');
+
 
 
 // <============================= HATI-HATI KHUSUS DEBUGING =============================>
@@ -48,3 +47,5 @@ Route::get('/logout','Auth\LoginController@signout')->name('logout');
 
 Route::get('/registerold','Auth\RegisterController@indexregistrationold');
 Route::get('/debug','DebugController@indexdebug');
+
+// <=========================== HATI-HATI KHUSUS DEBUGING END ===========================>
