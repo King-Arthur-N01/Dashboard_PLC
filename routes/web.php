@@ -24,6 +24,7 @@ Route::post('/login','Auth\LoginController@authenticateuser')->name('pushlogin')
 
 Route::get('/register','Auth\RegisterController@indexregistration')->name('register');
 Route::post('/register','Auth\RegisterController@authenticatecreate')->name('pushregister');
+Route::get('/userdelete/{id}','Auth\RegisterController@deleteuser')->name('deleteaccount');
 
 Route::get('/monitoring','Monitoring\MonitoringController@readmonitor')->name('monitoring');
 // Route::post('/monitoring','Montoring\MonitoringController@createmonitor')->name('pushmonitor');
@@ -36,8 +37,9 @@ Route::get('/manageuser','Account\UsertableController@readusertable')->name('man
 
 Route::get('/account','Account\UseraccountController@readuser')->name('account');
 Route::post('/account','Account\UseraccountController@createuser')->name('createaccount');
-Route::get('/userdelete/{$id}','Account\UseraccountController@deleteuser')->name('deleteaccount');
-// <======================== Admin panel dashboard route configuration ========================>
+// Route::get('/userdelete/{$id}','Account\UseraccountController@deleteuser')->name('deleteaccount');
+
+// <====================== Admin panel dashboard route configuration end ======================>
 Route::get('/logout','Auth\LoginController@signout')->name('logout');
 
 

@@ -153,7 +153,7 @@
                             </li>
                             <li class="nav-item ">
                                 {{-- ========================== tempat untuk table sebelah kiri ========================== --}}
-                                <a class="nav-link active" href="#"><i class="fas fa-fw fa-home"></i>Dashboard</a>
+                                <a class="nav-link active" href="{{ route('home')}}"><i class="fas fa-fw fa-home"></i>Dashboard</a>
                                 {{-- ========================== batas menu ========================== --}}
                                 <div>
                                     <a class="nav-link" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1"><i class="fas fa-fw fa-table"></i>Tables</a>
@@ -257,8 +257,8 @@
 {{-- <=========================BATAS HARDCODED JAVASCRIPT!!!!=========================> --}}
     <script>
         $(document).ready(function(){
-            const passwordInput = document.getElementById('password');
-            const passwordEye = document.getElementById('toggler');
+            const passwordInput = document.getElementById('password','confirm_password');
+            const passwordEye = document.getElementById('toggler','confirm_toggle');
             passwordEye.addEventListener('click', () => {
                 if (passwordInput.type === 'password') {
                     passwordInput.type = 'text';

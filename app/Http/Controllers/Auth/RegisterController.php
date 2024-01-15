@@ -24,12 +24,6 @@ class RegisterController extends Controller
     {
         return view('auth.register');
     }
-// <============================= HATI-HATI KHUSUS DEBUGING =============================>
-    public function indexregistrationold()
-    {
-        return view('auth.registerold');
-    }
-// <============================= HATI-HATI KHUSUS DEBUGING =============================>
     public function authenticatecreate(Request $request)
     {
         $request->validate([
@@ -51,5 +45,12 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+    public function deleteuser($id){
+        User::where('id',$id)->delete();
+        return back()->with('success','User berhasil dihapus');
+    }
+    // <============================= HATI-HATI KHUSUS DEBUGING =============================>
+
+    // <=========================== HATI-HATI KHUSUS DEBUGING END ===========================>
 }
 ?>

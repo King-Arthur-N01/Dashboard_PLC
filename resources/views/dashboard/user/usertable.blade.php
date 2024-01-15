@@ -38,13 +38,17 @@
                         </div>
                     </div>
                 <div class="card-body">
+                    @if(session('success'))
+                    <div class="alert alert-success">{{ session('success') }}</div>
+                    @endif
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered first">
                             <thead>
                                 <tr>
+                                    <th>ID</th>
                                     <th>Name</th>
                                     <th>NIK</th>
-                                    <th>Password</th>
+                                    <th>Dapartment</th>
                                     <th>Create Date</th>
                                     <th>Action</th>
                                 </tr>
@@ -52,22 +56,17 @@
                             <tbody>
                                 @foreach ($users as $user)
                                 <tr>
+                                    <td>{{$user->id}}</td>
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->nik}}</td>
                                     <td>{{$user->department}}</td>
                                     <td>{{$user->created_at}}</td>
-                                    <td><a></a></td>
+                                    <td><a class="btn btn-primary btn-xm" style="color:white" href="">Edit</a>
+                                        <a class="btn btn-primary btn-xm" style="color:white" href="{{route('deleteaccount',$user->id)}}" >Delete</a>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
-                            {{-- <tfoot>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>NIK</th>
-                                    <th>Departement</th>
-                                    <th>Create Date</th>
-                                </tr>
-                            </tfoot> --}}
                         </table>
                     </div>
                 </div>

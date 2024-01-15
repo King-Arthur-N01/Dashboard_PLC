@@ -42,8 +42,6 @@ class PermissionDemoSeeder extends Seeder
         $adminRole->givePermissionTo('unpublish page');
 
         $superadminRole = Role::create(['name' => 'super-admin']);
-        // gets all permissions via Gate::before rule
-
         // create demo users
         $user = User::create([
             'name' => 'user',
