@@ -16,7 +16,7 @@
                     right: 40
                 },
                 axisY: {
-                    
+
                 }
             });
 
@@ -41,7 +41,7 @@
                     right: 10
                 },
                 axisY: {
-                  
+
                 },
 
                 low: 0
@@ -66,7 +66,7 @@
                 axisY: {
                     onlyInteger: true,
                     offset: 20,
-                    
+
                 },
 
             });
@@ -132,7 +132,7 @@
                 {
                     low: 0,
                     showArea: true,
-                    
+
                 });
         }
 
@@ -157,7 +157,7 @@
                     showLabel: false,
                     showGrid: false
                 },
-               
+
             });
         }
 
@@ -172,7 +172,7 @@
             }, {
                 stackBars: true,
                 axisY: {
-                    
+
                 }
             }).on('draw', function(data) {
                 if (data.type === 'bar') {
@@ -208,22 +208,20 @@
 
         if ($('.ct-chart-bipolar').length) {
             var data = {
-                labels: ['W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'W8', 'W9', 'W10'],
-                series: [
-                    [1, 2, 4, 8, 6, -2, -1, -4, -6, -2]
-                ]
+                labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10' , '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                series: [[10, 25, 41, 81, 64, 50, 70, 40, 46, 72, 91, 32, 44, 68, 76, 82, 55, 24, 56, 72]]
             };
 
             var options = {
-                high: 10,
-                low: -10,
+                high: 100,
+                low: 0,
                 axisX: {
-                    labelInterpolationFnc: function(value, index) {
-                        return index % 2 === 0 ? value : null;
-                    }
+                    // labelInterpolationFnc: function(value, index) {
+                    //     return index % 2 === 0 ? value : null;
+                    // }
                 },
                 axisY: {
-                    
+
                 }
             };
 
@@ -246,7 +244,7 @@
                     }
                 },
                 axisY: {
-                    
+
                 }
             });
 

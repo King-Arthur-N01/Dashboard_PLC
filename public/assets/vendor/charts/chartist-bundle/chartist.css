@@ -443,7 +443,8 @@
     content: "";
     width: 0;
     height: 0;
-    padding-bottom: 50.804697%; }
+    padding-bottom: 50.804697%;
+    }
   .ct-golden-section:after {
     content: "";
     display: table;

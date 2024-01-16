@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Auth\Events\Authenticated;
+use Carbon\Carbon;
 class HomeController extends Controller
 {
 
@@ -22,6 +23,6 @@ class HomeController extends Controller
     {
         return view('dashboard.monitoring.home');
     }
-
+    
 
 }

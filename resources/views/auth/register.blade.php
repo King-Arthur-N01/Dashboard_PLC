@@ -1,5 +1,5 @@
 @extends('layout.master')
-
+@section('title','Add User')
 @section('content')
     <div class="container-fluid  dashboard-content">
         <div class="row">

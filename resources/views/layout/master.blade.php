@@ -34,12 +34,17 @@
         <!-- navbar -->
         <!-- ============================================================== -->
         <div class="dashboard-header">
-            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top" style="box-shadow: 0px 1px 10px 0px #aaaaaa">
                 <a class="navbar-brand" href="{{ route('home')}}">Concept</a>
-                {{-- <input type="button" value="Refresh" onClick="reload(true)"> --}}
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <div>
+                    <h4 class="title-content">
+                        @yield('title')
+                    </h4>
+                </div>
+                <div id="clock"></div>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav navbar-right-top" style="margin-left: auto">
                         <li class="nav-item dropdown notification">
@@ -51,7 +56,7 @@
                                         <div class="list-group">
                                             <a href="#" class="list-group-item list-group-item-action active">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
@@ -59,7 +64,7 @@
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham is now following you</span>
                                                         <div class="notification-date">2 days ago</div>
                                                     </div>
@@ -67,7 +72,7 @@
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
@@ -75,7 +80,7 @@
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
@@ -133,7 +138,6 @@
                                 <a class="dropdown-item" href="{{ route('logout')}}"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
                         </li>
-
                     </ul>
                 </div>
             </nav>
@@ -157,7 +161,7 @@
                                 <a class="nav-link active" href="{{route('home')}}"><i class="fas fa-fw fa-home"></i>Dashboard</a>
                                 {{-- ========================== batas menu ========================== --}}
                                 <div>
-                                    <a class="nav-link" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1"><i class="fas fa-fw fa-table"></i>Tables</a>
+                                    <a class="nav-link" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1"><i class="fas fa-fw fa-chart-area"></i>Monitoring</a>
                                     <div id="submenu-1" class="collapse submenu" style="">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
@@ -205,6 +209,7 @@
                 @yield('content')
                 {{-- ==========================tempat menaruh table section========================== --}}
                 </div>
+            </div>
         </div>
         <!-- ============================================================== -->
         <!-- end wrapper  -->
@@ -218,14 +223,24 @@
     <!-- Optional JavaScript -->
     <!-- jquery 3.3.1 -->
     <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assets/vendor/inputmask/js/jquery.inputmask.bundle.js"></script>
+    <script src="assets/vendor/multi-select/js/jquery.multi-select.js"></script>
     <!-- bootstap bundle js -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="assets/vendor/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/vendor/datatables/js/buttons.bootstrap4.min.js"></script>
     <!-- slimscroll js -->
     <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <!-- main js -->
     <script src="assets/libs/js/main-js.js"></script>
+    <script src="assets/libs/js/dashboard-ecommerce.js"></script>
+    <script src="assets/vendor/datatables/js/data-table.js"></script>
     <!-- chart chartist js -->
     <script src="assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
+    <script src="assets/vendor/charts/chartist-bundle/Chartistjs.js"></script>
+    <script src="assets/vendor/charts/charts-bundle/Chart.bundle.js"></script>
+    <script src="assets/vendor/charts/charts-bundle/chartjs.js"></script>
+
     <!-- sparkline js -->
     <script src="assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
     <!-- morris js -->
@@ -235,15 +250,9 @@
     <script src="assets/vendor/charts/c3charts/c3.min.js"></script>
     <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
-    <script src="assets/libs/js/dashboard-ecommerce.js"></script>
 
-
-    <script src="assets/vendor/multi-select/js/jquery.multi-select.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script src="assets/vendor/datatables/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
-    <script src="assets/vendor/datatables/js/buttons.bootstrap4.min.js"></script>
-    <script src="assets/vendor/datatables/js/data-table.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
@@ -253,7 +262,6 @@
     <script src="https://cdn.datatables.net/rowgroup/1.0.4/js/dataTables.rowGroup.min.js"></script>
     <script src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
     <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
-    <script src="assets/vendor/inputmask/js/jquery.inputmask.bundle.js"></script>
 
 {{-- <=========================BATAS HARDCODED JAVASCRIPT!!!!=========================> --}}
     <script>
@@ -271,6 +279,24 @@
                     passwordEye.classList.remove('fa-eye-slash');
                 }
             });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            function displayTime() {
+                //peraturan waktu
+                var options = {
+                    hour12: false,
+                    hourCycle: 'h12',
+                    timeZone: 'Asia/Jakarta'
+                };
+                //inisialisasi waktu
+                var date = new Date();
+                var time = date.toLocaleTimeString('en-US', options);
+                document.getElementById("clock").textContent = time;
+            }
+            setInterval(displayTime, 1000);
         });
     </script>
 {{-- <=======================BATAS HARDCODED JAVASCRIPT END!!!!=======================> --}}

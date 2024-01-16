@@ -3698,10 +3698,10 @@ input[type="submit"].btn-block {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
-    flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+    flex-direction: row;
 }
 .navbar-nav .nav-link {
     padding-right: 0;
@@ -3864,7 +3864,6 @@ input[type="submit"].btn-block {
         -ms-flex-preferred-size: auto;
         flex-basis: auto;
         align-items: center;
-        justify-content: flex-end;
     }
     .navbar-expand-lg .navbar-toggler {
         display: none;
