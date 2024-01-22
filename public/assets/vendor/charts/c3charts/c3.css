@@ -160,7 +160,8 @@
 /*-- Arc --*/
 .c3-chart-arcs-title {
   dominant-baseline: middle;
-  font-size: 1.3em; }
+  font-size: 14px;
+  }
 
 .c3-chart-arcs .c3-chart-arcs-background {
   fill: #e0e0e0;
