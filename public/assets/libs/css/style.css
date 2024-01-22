@@ -1066,7 +1066,7 @@ Borders
 }
 
 .text-warning {
-    bcolor: #ffc108 !important;
+    color: #ffc108 !important;
 }
 
 .text-info {
@@ -3296,13 +3296,30 @@ btn-link
 /* -----------------------
 2.3  Cards
 -------------------------*/
+.card-dashboard{
+    padding: 0px 12px 0px 11px;
+    margin: 0px 0px 0px 0px;
+}
 
 .card {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border: none;
     -webkit-box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
     -moz-box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
     box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
+}
+
+.card-custom-1{
+    background-color: #148cdb;
+    border-radius: 0px;
+}
+
+.card-custom-2{
+    background-color: #01afa1;
+}
+
+.card-custom-3{
+    background-color: #ffcc11;
 }
 
 .card-header {
@@ -3310,13 +3327,24 @@ btn-link
     border-bottom: 1px solid #e6e6f2;
 }
 
-.card-title {}
+.card-title {
+    padding-right: 10px;
+    color: white;
+    font-size: 24px;
+    text-align: right;
+}
 
 .card-subtitle {
     font-size: 14px;
 }
 
-.card-body {}
+.card-body {
+
+}
+
+.card-body-dashboard{
+
+}
 
 .card-text {}
 
@@ -3325,7 +3353,7 @@ btn-link
     background: #f6f6ff;
 }
 
-.card-link {}
+.card-link {color: black;font-size: 14px;text-align: right;}
 
 .toolbar {
     font-size: 18px;
@@ -5354,6 +5382,18 @@ Vertical Timeline - by CodyHouse.co
     flex: 1;
     text-align: center;
     display: inline-block;
+}
+
+.card-footer-item-custom {
+    width: 100%;
+    padding: 8px 0px;
+    -webkit-box-flex: 1;
+    border: 3px solid #148cdb;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: right;
+    display: inline-block;
+    background-color: white;
 }
 
 .card-footer-item-bordered:not(:last-child) {

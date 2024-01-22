@@ -22,15 +22,15 @@ class LoginController extends Controller
         ]);
         $credentials = $request->only('nik','password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('home')->withSuccess('Signed in');
+            return redirect()->intended('home')->with('Signed in');
         }
-        return redirect("login")->withSuccess('Login details are not valid');
+        return redirect("login")->with('Login details are not valid');
     }
     public function enterlogin(){
         if (Auth::check()) {
             return view('home');
         }
-    return redirect("login")->withSuccess('You are not allowed to access');
+    return redirect("login")->with('You are not allowed to access');
     }
     public function signout(){
     Session::flush();
@@ -38,4 +38,3 @@ class LoginController extends Controller
     return Redirect('login');
     }
 }
-?>

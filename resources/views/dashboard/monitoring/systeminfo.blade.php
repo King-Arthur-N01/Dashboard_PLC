@@ -2,13 +2,6 @@
 @section('title','System Info')
 @section('content')
 
-<div class="container-fluid  dashboard-content">
-    <!-- ============================================================== -->
-    <!-- pageheader -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- end pageheader -->
-    <!-- ============================================================== -->
     <div class="row">
         <!-- ============================================================== -->
         <!--multi line lables chart  -->
@@ -36,6 +29,15 @@
         <!-- end multi line lables chart  -->
         <!-- ============================================================== -->
     </div>
-</div>
+
 
 @endsection
+
+@push('style')
+    <link rel="stylesheet" href="{{asset('ssets/vendor/charts/c3charts/c3.css')}}">
+@endpush
+@push('script')
+    <script src="{{asset('assets/libs/js/main-js.js')}}"></script>
+    <script src="{{asset('assets/vendor/charts/charts-bundle/Chart.bundle.js')}}"></script>
+    <script src="{{asset('assets/vendor/charts/charts-bundle/chartjs.js')}}"></script>
+@endpush

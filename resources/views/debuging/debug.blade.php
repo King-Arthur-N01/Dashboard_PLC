@@ -1,87 +1,77 @@
-<!DOCTYPE html><div class="container">
-    <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
+@extends('layout.master')
+@section('title','Manage User')
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: stretch;
-    }
-
-    form {
-      color: #555;
-      display: flex;
-      padding: 2px;
-      border: 1px solid currentColor;
-      border-radius: 5px;
-      margin: 0 0 30px;
-    }
-
-    input[type="search"] {
-      border: none;
-      background: transparent;
-      margin: 0;
-      padding: 7px 8px;
-      font-size: 14px;
-      color: inherit;
-      border: 1px solid transparent;
-      border-radius: inherit;
-    }
-
-    input[type="search"]::placeholder {
-      color: #bbb;
-    }
-
-    button[type="submit"] {
-      text-indent: -999px;
-      overflow: hidden;
-      width: 40px;
-      padding: 0;
-      margin: 0;
-      border: 1px solid transparent;
-      border-radius: inherit;
-      background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
-      cursor: pointer;
-      opacity: 0.7;
-    }
-
-    button[type="submit"]:hover {
-      opacity: 1;
-    }
-
-    button[type="submit"]:focus,
-    input[type="search"]:focus {
-      box-shadow: 0 0 3px 0 #1183d6;
-      border-color: #1183d6;
-      outline: none;
-    }
-
-    form.nosubmit {
-     border: none;
-     padding: 0;
-    }
-
-    input.nosubmit {
-      border: 1px solid #555;
-      width: 100%;
-      padding: 9px 4px 9px 40px;
-       background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
-    }
-    </style>
-<body>
-    <form>
-        <input type="search" placeholder="Search...">
-        <button type="submit">Search</button>
-      </form>
-</body>
-
-
-    </html>
+@section('content')
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="page-header">
+                <h2 class="pageheader-title">Data Tables</h2>
+                <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce
+                    sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                <div class="page-breadcrumb">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"
+                                    class="breadcrumb-link">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="#"
+                                    class="breadcrumb-link">Tables</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Data Tables</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- end pageheader -->
+    <!-- ============================================================== -->
+    <div class="row">
+        <!-- ============================================================== -->
+        <!-- basic table  -->
+        <!-- ============================================================== -->
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="card">
+                <h5 class="card-header">Basic Table</h5>
+                <div class="col-sm-12 col-md-12">
+                    <div class="dt-buttons">
+                        <a class="btn btn-block btn-primary" href="#" tabindex="0" aria-controls="example">+ Add User</a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered first">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>NIK</th>
+                                    <th>Dapartment</th>
+                                    <th>Create Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>adeyoga</td>
+                                        <td>11111</td>
+                                        <td>IT</td>
+                                        <td>2024-01-10 02:47:38</td>
+                                        <td>
+                                            <a class="btn btn-primary btn-xm" style="color:white"
+                                                href="">Edit</a>
+                                            <a class="btn btn-primary btn-xm" style="color:white"
+                                                href="">Delete</a>
+                                        </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end basic table  -->
+        <!-- ============================================================== -->
+    </div>
+@endsection

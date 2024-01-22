@@ -1,12 +1,34 @@
 @extends('layout.master')
 @section('title','Dashboard')
+
 @section('content')
 <div class="row">
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-        {{-- <div class="page-header">
-            <h2 class="pageheader-title">Dashboard </h2>
-            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
-        </div> --}}
+    <div class="card-dashboard col-md-4">
+        <div class="card card-custom-1">
+            <div class="card-body-custom">
+                <h2 class="card-title">01</h2>
+                <h3 class="card-title">STATUS</h3>
+                <div class="card-footer-item-custom card-footer-item-bordered">
+                    <a class="card-link">View Details<i></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-dashboard col-md-4">
+        <div class="card card-custom-2">
+            <div class="card-body">
+                <h2 class="card-title">02</h2>
+                <h3 class="card-title">DIAGRAM</h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-dashboard col-md-4">
+        <div class="card card-custom-3">
+            <div class="card-body">
+                <h2 class="card-title">03</h2>
+                <h3 class="card-title">SETUP</h3>
+            </div>
+        </div>
     </div>
 </div>
 <div class="row">

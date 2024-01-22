@@ -114,3 +114,14 @@
             </div>
         </div>
     @endsection
+    @push('style')
+        <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/datepicker/tempusdominus-bootstrap-4.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/inputmask/css/inputmask.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('')}}">
+    @endpush
+    @push('script')
+        <!-- custom js -->
+        <script src="{{asset('assets/vendor/custom-js/hardcoded.js')}}"></script>
+        <script src="{{asset('assets/vendor/inputmask/js/jquery.inputmask.bundle.js')}}"></script>
+    @endpush

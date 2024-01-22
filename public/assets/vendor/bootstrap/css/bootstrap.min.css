@@ -168,7 +168,7 @@ a:hover {
     text-decoration: underline;
 }
 a:not([href]):not([tabindex]) {
-    color: inherit;
+    padding-right: 10px;
     text-decoration: none;
 }
 a:not([href]):not([tabindex]):focus,
@@ -4055,6 +4055,13 @@ input[type="submit"].btn-block {
     flex: 1 1 auto;
     padding: 1.25rem;
 }
+
+.card-body-custom {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 10px 0px 0px 0px;
+}
+
 .card-title {
     margin-bottom: 0.75rem;
 }
