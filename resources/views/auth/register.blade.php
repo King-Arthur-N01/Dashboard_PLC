@@ -124,4 +124,5 @@
         <!-- custom js -->
         <script src="{{asset('assets/vendor/custom-js/hardcoded.js')}}"></script>
         <script src="{{asset('assets/vendor/inputmask/js/jquery.inputmask.bundle.js')}}"></script>
+        
     @endpush

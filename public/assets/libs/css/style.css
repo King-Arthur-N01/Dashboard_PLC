@@ -3311,15 +3311,68 @@ btn-link
 
 .card-custom-1{
     background-color: #148cdb;
-    border-radius: 0px;
+    border-radius: 6px;
+}
+
+.card-footer-item-custom-1 {
+    width: 100%;
+    padding: 8px 0px;
+    -webkit-box-flex: 1;
+    border: 3px solid #148cdb;
+    border-radius: 10px;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: right;
+    display: inline-block;
+    background-color: white;
 }
 
 .card-custom-2{
-    background-color: #01afa1;
+    background-color: #05c2a4;
+    border-radius: 6px;
+}
+
+.card-footer-item-custom-2 {
+    width: 100%;
+    padding: 8px 0px;
+    -webkit-box-flex: 1;
+    border: 3px solid #05c2a4;
+    border-radius: 10px;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: right;
+    display: inline-block;
+    background-color: white;
 }
 
 .card-custom-3{
     background-color: #ffcc11;
+    border-radius: 6px;
+}
+
+.card-footer-item-custom-3 {
+    width: 100%;
+    padding: 8px 0px;
+    -webkit-box-flex: 1;
+    border: 3px solid #ffcc11;
+    border-radius: 10px;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: right;
+    display: inline-block;
+    background-color: white;
+}
+
+.card-chart-custom-1{
+    background-color: #ffffff;
+    /* height: 325px; */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    /* width: 100%; */
+}
+
+.card-chart-custom-2{
+
 }
 
 .card-header {
@@ -3328,7 +3381,7 @@ btn-link
 }
 
 .card-title {
-    padding-right: 10px;
+    /* padding: 0px 10px 0px 0px; */
     color: white;
     font-size: 24px;
     text-align: right;
@@ -3342,9 +3395,7 @@ btn-link
 
 }
 
-.card-body-dashboard{
-
-}
+.card-body-chart-1{align-items: center;height: 325px;width: 596px;}
 
 .card-text {}
 
@@ -5382,18 +5433,6 @@ Vertical Timeline - by CodyHouse.co
     flex: 1;
     text-align: center;
     display: inline-block;
-}
-
-.card-footer-item-custom {
-    width: 100%;
-    padding: 8px 0px;
-    -webkit-box-flex: 1;
-    border: 3px solid #148cdb;
-    -ms-flex: 1;
-    flex: 1;
-    text-align: right;
-    display: inline-block;
-    background-color: white;
 }
 
 .card-footer-item-bordered:not(:last-child) {

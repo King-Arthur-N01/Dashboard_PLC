@@ -17,7 +17,7 @@
     {{-- <link rel="stylesheet" href="assets/vendor/charts/chartist-bundle/chartist.css"> --}}
     {{-- <link rel="stylesheet" href="assets/vendor/charts/chartist-bundle/Chartistjs.jsChartistjs.js"> --}}
     {{-- <link rel="stylesheet" href="assets/vendor/charts/morris-bundle/morris.css"> --}}
-    <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
+    {{-- <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css"> --}}
     {{-- <link rel="stylesheet" type="text/css" href="assets/vendor/datatables/css/dataTables.bootstrap4.css"> --}}
     {{-- <link rel="stylesheet" type="text/css" href="assets/vendor/datatables/css/buttons.bootstrap4.css"> --}}
     {{-- <link rel="stylesheet" type="text/css" href="assets/vendor/datatables/css/select.bootstrap4.css"> --}}
@@ -215,7 +215,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
+                                Copyright © 2024 Concept. All rights reserved. Dashboard by <a href="https://github.com/King-Arthur-N01">Koko Dwi A</a>.
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                 <div class="text-md-right footer-links d-none d-sm-block">
@@ -271,9 +271,9 @@
     <script src="assets/vendor/charts/morris-bundle/morris.js"></script> --}}
 
     <!-- chart c3 js -->
-    <script src="assets/vendor/charts/c3charts/c3.min.js"></script>
+    {{-- <script src="assets/vendor/charts/c3charts/c3.min.js"></script>
     <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
-    <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
+    <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script> --}}
 
     {{-- <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
