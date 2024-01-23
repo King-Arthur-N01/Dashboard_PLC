@@ -541,6 +541,13 @@ pre code {
     justify-content: center;
 }
 
+.row-card-custom {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
 .row-chart-custom {height: 320px;}
 
 .no-gutters {
@@ -4061,7 +4068,7 @@ input[type="submit"].btn-block {
 
 .card-body-custom {
     -ms-flex: 1 1 auto;
-    /* display: flex; */
+    display: flex;
     padding: 10px 0px 0px 0px;
     flex-direction: column;
 }
