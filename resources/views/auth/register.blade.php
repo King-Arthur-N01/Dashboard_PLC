@@ -1,25 +1,6 @@
 @extends('layout.master')
 @section('title','Add User')
 @section('content')
-    <div class="container-fluid  dashboard-content">
-        <div class="row">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <div class="page-header" id="top">
-                    <h2 class="pageheader-title">Form Elements </h2>
-                    <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet
-                        vestibulum mi. Morbi lobortis pulvinar quam.</p>
-                    <div class="page-breadcrumb">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a class="breadcrumb-link">Dashboard</a></li>
-                                <li class="breadcrumb-item"><a class="breadcrumb-link">Forms</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Form Elements</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row">
             <!-- ============================================================== -->
             <!-- valifation types -->
@@ -115,14 +96,12 @@
         </div>
     @endsection
     @push('style')
-        <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/datepicker/tempusdominus-bootstrap-4.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/inputmask/css/inputmask.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('')}}">
     @endpush
     @push('script')
         <!-- custom js -->
-        <script src="{{asset('assets/vendor/custom-js/hardcoded.js')}}"></script>
         <script src="{{asset('assets/vendor/inputmask/js/jquery.inputmask.bundle.js')}}"></script>
-        
+        <script src="{{asset('assets/vendor/custom-js/hardcoded.js')}}"></script>
     @endpush

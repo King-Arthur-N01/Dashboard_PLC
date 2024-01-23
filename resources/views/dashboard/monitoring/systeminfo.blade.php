@@ -3,41 +3,43 @@
 @section('content')
 
     <div class="row">
-        <!-- ============================================================== -->
-        <!--multi line lables chart  -->
-        <!-- ============================================================== -->
         {{-- <div class="col-6">
             <div class="card">
                 <h5 class="card-header">Multi-line Labels</h5>
                 <div class="card-body">
                     <div class="ct-chart-bipolar ct-golden-section">
-                        <p class="text-in-chart">Day</p>
                     </div>
                 </div>
             </div>
         </div> --}}
 
-        <div class="col-6">
-            <div class="card">
-                <h5 class="card-header">Bar Charts</h5>
-                <div class="card-body">
-                    <canvas id="chartjs_bar"></canvas>
+        <div class="card">
+            <h5 class="card-header">Compositebar Line Chart</h5>
+            <div class="card-body">
+                <div id="compositebar" class="spark-chart"></div>
+                <div class="spark-chart-info">
+                    <h5 class="mb-0">Sales</h5>
+                    <p>70%</p>
                 </div>
             </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- end multi line lables chart  -->
-        <!-- ============================================================== -->
     </div>
 
 
 @endsection
 
 @push('style')
-    <link rel="stylesheet" href="{{asset('ssets/vendor/charts/c3charts/c3.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/vendor/charts/c3charts/c3.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/vendor/charts/chartist-bundle/chartist.css')}}">
 @endpush
 @push('script')
     <script src="{{asset('assets/libs/js/main-js.js')}}"></script>
     <script src="{{asset('assets/vendor/charts/charts-bundle/Chart.bundle.js')}}"></script>
     <script src="{{asset('assets/vendor/charts/charts-bundle/chartjs.js')}}"></script>
+
+    <script src="{{asset('assets/vendor/charts/sparkline/jquery.sparkline.js')}}"></script>
+    <script src="{{asset('assets/vendor/charts/sparkline/spark-js.js')}}"></script>
+
+    <script src="{{asset('assets/vendor/charts/chartist-bundle/chartist.min.js')}}"></script>
+    <script src="{{asset('assets/vendor/charts/chartist-bundle/Chartistjs.js')}}"></script>
 @endpush

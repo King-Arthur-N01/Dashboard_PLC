@@ -3392,10 +3392,14 @@ btn-link
 }
 
 .card-body {
-
 }
 
-.card-body-chart-1{align-items: center;height: 325px;width: 596px;}
+.card-body-chart-1{
+    /* background-color: white; */
+    align-items: center;
+    padding: 10px;
+    margin: 0px 0px 20px 0px;
+}
 
 .card-text {}
 

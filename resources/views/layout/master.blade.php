@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/vendor/fonts/simple-line-icons/css/simple-line-icons.css">
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/datepicker/tempusdominus-bootstrap-4.css">
     {{-- <link rel="stylesheet" href="assets/vendor/charts/chartist-bundle/chartist.css"> --}}
     {{-- <link rel="stylesheet" href="assets/vendor/charts/chartist-bundle/Chartistjs.jsChartistjs.js"> --}}
     {{-- <link rel="stylesheet" href="assets/vendor/charts/morris-bundle/morris.css"> --}}
@@ -289,7 +290,7 @@
 
     @stack('script')
 {{-- <=========================BATAS HARDCODED JAVASCRIPT!!!!=========================> --}}
-
+    <script src="{{asset('assets/vendor/custom-js/clock.js')}}"></script>
 {{-- <=======================BATAS HARDCODED JAVASCRIPT END!!!!=======================> --}}
 </body>
 

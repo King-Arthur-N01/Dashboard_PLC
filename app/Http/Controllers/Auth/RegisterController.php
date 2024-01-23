@@ -49,8 +49,5 @@ class RegisterController extends Controller
         User::where('id',$id)->delete();
         return back()->with('success','User berhasil dihapus');
     }
-    // <============================= HATI-HATI KHUSUS DEBUGING =============================>
-
-    // <=========================== HATI-HATI KHUSUS DEBUGING END ===========================>
 }
 ?>

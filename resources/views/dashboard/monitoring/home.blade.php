@@ -50,25 +50,29 @@
                             <h2 class="card-title">03</h2>
                             <h3 class="card-title">SETUP</h3>
                         </div>
-                    </div>
-                    <div class="card-footer-item-custom-3">
-                        <a class="card-link">View Details &nbsp;<i class="mdi mdi-settings"></i></a>
+                        <div class="card-footer-item-custom-3">
+                            <a class="card-link">View Details &nbsp;<i class="mdi mdi-settings"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row row-chart-custom">
-        <div class="card">
-            <h5 class="card-header">Combination Chart </h5>
-            <div class="card-body">
-                <div id="c3chart_combine"></div>
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <h5 class="card-header">Combination Chart </h5>
+                <div class="card-body">
+                    <div id="c3chart_combine"></div>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <h5 class="card-header">Bar Charts</h5>
-            <div class="card-body">
-                <canvas id="chartjs_bar"></canvas>
+        <div class="col-6">
+            <div class="card">
+                <h5 class="card-header">Bar Charts</h5>
+                <div class="card-body">
+                    <canvas id="chartjs_bar"></canvas>
+                </div>
             </div>
         </div>
     </div>

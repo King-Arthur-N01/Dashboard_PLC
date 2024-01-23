@@ -548,7 +548,7 @@ pre code {
     flex-wrap: wrap;
   }
 
-.row-chart-custom {height: 320px;}
+.row-chart-custom {/* height: 320px; */}
 
 .no-gutters {
     margin-right: 0;
