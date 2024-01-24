@@ -3309,9 +3309,7 @@ btn-link
     box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
 }
 
-.card-custom-1{
-    background-color: #148cdb;
-    border-radius: 6px;
+.card-char-custom{
 }
 
 .card-footer-item-custom-1 {

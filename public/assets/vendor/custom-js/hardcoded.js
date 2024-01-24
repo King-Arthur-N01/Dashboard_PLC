@@ -7,7 +7,7 @@ $(document).ready(
             passwordInput.type = 'text';
             passwordEye.classList.add('fa-eye-slash');
             passwordEye.classList.remove('fa-eye');
-        } else {
+        }else {
             passwordInput.type = 'password';
             passwordEye.classList.add('fa-eye');
             passwordEye.classList.remove('fa-eye-slash');
@@ -19,4 +19,3 @@ $(document).ready(
         }
       }
 });
-

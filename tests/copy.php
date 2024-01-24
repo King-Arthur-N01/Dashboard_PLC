@@ -35,3 +35,33 @@
             </div>
         </div>
     </div>
+
+<script>
+    $(document).ready(function () {
+  const passwordInput = document.getElementById('password');
+  const passwordEye = document.getElementById('toggler');
+
+  passwordEye.addEventListener('click', (event) => {
+    event.preventDefault();
+    togglePasswordVisibility(passwordInput, passwordEye);
+  });
+
+  function togglePasswordVisibility(input, eye) {
+    if (input.type === 'password') {
+      input.type = 'text';
+      eye.classList.remove('fa-eye');
+      eye.classList.add('fa-eye-slash');
+    } else {
+      input.type = 'password';
+      eye.classList.remove('fa-eye-slash');
+      eye.classList.add('fa-eye');
+    }
+  }
+
+  function confirmHapus(urlHapus) {
+    if (confirm("Apakah anda yakin ingin menghapus USER ini ?")) {
+      document.location = urlHapus;
+    }
+  }
+});
+</script>

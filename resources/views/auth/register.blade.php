@@ -49,7 +49,7 @@
                                         <div>
                                             <label class="col-form-label text-sm-right" style="margin-left: 4px;">Confirm Password</label>
                                             <div class="form-password-group" style="margin: 0px;">
-                                            <input class="form-password-control form-control-lg" name="password_confirmation" type="password" placeholder="Confirm Password" id="confirm_password">
+                                            <input class="form-password-control form-control-lg" type="password" name="password_confirmation" placeholder="Confirm Password" id="confirm_password">
                                             <button type="button" class="form-password-control-button fa fa-eye-slash" style="padding: 10px;" id="confirm_toggler"></button>
                                             </div>
                                         </div>
