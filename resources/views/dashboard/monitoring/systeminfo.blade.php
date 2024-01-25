@@ -3,16 +3,8 @@
 @section('content')
 
     <div class="row">
-        <div class="card col-12 highcharts-figure">
+        <div class="card-chart-custom-1 highcharts-figure">
             <div id="container"></div>
-
-            <p class="highcharts-description">
-                A basic column chart comparing estimated corn and wheat production
-                in some countries.
-
-                The chart is making use of the axis crosshair feature, to highlight
-                the hovered country.
-            </p>
         </div>
     </div>
 @endsection
@@ -43,10 +35,24 @@
 {{-- <=========================BATAS HARDCODED JAVASCRIPT!!!!=========================> --}}
 <script type="text/javascript">
 
+function callChart() {
+    $.ajax({
+        type: "POST",
+        url: './geo-info-response',
+        data: "",
+        success: function() {
+            console.log("Geodata sent");
+        }
+    })
+};
+
+// <<<------------------------------- BATAS JAVACRIPT CHART!!!! ------------------------------->>>
     $(document).ready(
     Highcharts.chart('container', {
         chart: {
-            type: 'column'
+            type: 'column',
+            width: 1050,   // Set the width of the chart
+            height: 390   // Set the height of the chart
         },
         title: {
             text: 'Report Uptime VS Downtime',
@@ -57,7 +63,7 @@
             align: 'left'
         },
         xAxis: {
-            categories: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Augtus', 'September', 'October', 'November', 'Desember'],
+            categories: ['Total Days'],
             crosshair: true,
             accessibility: {
                 description: 'Month'
@@ -89,6 +95,7 @@
             }
         ]
     }));
+// <<<----------------------------- BATAS JAVACRIPT CHART END!!!! ----------------------------->>>
 </script>
 {{-- <=======================BATAS HARDCODED JAVASCRIPT END!!!!=======================> --}}
 @endpush

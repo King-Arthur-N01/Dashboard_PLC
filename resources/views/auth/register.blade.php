@@ -97,8 +97,6 @@
     @endsection
     @push('style')
         <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/inputmask/css/inputmask.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{asset('')}}">
-        <link rel="stylesheet" type="text/css" href="{{asset('')}}">
     @endpush
     @push('script')
         <!-- custom js -->

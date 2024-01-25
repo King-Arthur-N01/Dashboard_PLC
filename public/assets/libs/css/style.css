@@ -3312,6 +3312,14 @@ btn-link
 .card-char-custom{
 }
 
+
+/* <<<================================ CSS CARD DASHBOARD ================================>>> */
+
+.card-custom-1{
+    background-color: #148cdb;
+    border-radius: 6px;
+}
+
 .card-footer-item-custom-1 {
     width: 100%;
     padding: 8px 0px;
@@ -3361,12 +3369,16 @@ btn-link
     background-color: white;
 }
 
+/* <<<============================== CSS CARD DASHBOARD END ==============================>>> */
+
 .card-chart-custom-1{
-    background-color: #ffffff;
-    /* height: 325px; */
+    /* background-color: #ffffff; */
     border-radius: 10px;
     margin-bottom: 20px;
-    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .card-chart-custom-2{

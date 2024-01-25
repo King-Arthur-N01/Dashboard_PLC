@@ -225,32 +225,53 @@
                 bindto: "#c3chart_combine",
                 data: {
                     columns: [
-                        ['data1', 30, 20, 50, 40, 60, 50],
-                        ['data2', 200, 130, 90, 240, 130, 220],
-                        ['data3', 300, 200, 160, 400, 250, 250],
-                        ['data4', 200, 130, 90, 240, 130, 220],
-                        ['data5', 130, 120, 150, 140, 160, 150],
-                        ['data6', 90, 70, 20, 50, 60, 120],
+                        ['Machine_1', 134, 122, 144, 140, 161, 157],
+                        ['Machine_2', 206, 138, 180, 211, 137, 222],
+                        ['Machine_3', 309, 214, 161, 304, 254, 256],
+                        ['Machine_4', 209, 156, 198, 247, 131, 228],
+                        ['Machine_5', 134, 123, 155, 146, 167, 151],
+                        ['Machine_6', 110, 174, 196, 158, 168, 127],
+                        ['Machine_7' , 178, 186, 211, 159, 138, 144],
+                        ['Machine_8' , 142, 115, 120, 135, 168, 157],
+                        ['Machine_9' , 176, 110, 124, 141, 163, 156],
+                        ['Machine_10' , 166, 149, 152, 177, 191, 166],
+                        ['Machine_11' , 133, 121, 154, 171, 198, 155],
+                        ['Machine_12' , 189, 193, 157, 177, 220, 203],
+                        ['Target_Runtime', 200, 200, 200, 200, 200, 200]
                     ],
                     type: 'bar',
                     types: {
-                        data3: 'spline',
-                        data4: 'line',
-                        data6: 'area',
+                        Machine_1: 'bar',
+                        Machine_2: 'bar',
+                        Machine_3: 'bar',
+                        Machine_4: 'bar',
+                        Machine_5: 'bar',
+                        Machine_6: 'bar',
+                        Machine_7: 'bar',
+                        Machine_8: 'bar',
+                        Machine_9: 'bar',
+                        Machine_10: 'bar',
+                        Machine_11: 'bar',
+                        Machine_12: 'bar',
+                        Target_Runtime: 'line'
                     },
-                    groups: [
-                        ['data1', 'data2']
-                    ],
+                    // groups: [
+                    //     ['data1', 'data2']
+                    // ],
 
                     colors: {
-                        data1: '#5969ff',
-                        data2: '#ff407b',
-                        data3: '#25d5f2',
-                        data4: '#ffc750',
-                        data5: '#2ec551',
-                        data6: '#1ba3b9',
-
-
+                        Machine_1: '#5969ff',
+                        Machine_2: '#ff407b',
+                        Machine_3: '#25d5f2',
+                        Machine_4: '#ffc750',
+                        Machine_5: '#2ec551',
+                        Machine_6: '#1ba3b9',
+                        Machine_7: '#5969ff',
+                        Machine_8: '#ff407b',
+                        Machine_9: '#5969ff',
+                        Machine_10: '#ff407b',
+                        Machine_11: '#00ffff',
+                        Machine_12: '#1ba3b9'
                     }
 
                 },

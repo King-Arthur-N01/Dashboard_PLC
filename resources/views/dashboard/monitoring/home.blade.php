@@ -59,19 +59,11 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-6">
+        <div class="col-12">
             <div class="card">
-                <h5 class="card-header">Combination Chart </h5>
+                <h5 class="card-header">Wealding Machine Runtime</h5>
                 <div class="card-body">
                     <div id="c3chart_combine"></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="card">
-                <h5 class="card-header">Bar Charts</h5>
-                <div class="card-body">
-                    <canvas id="chartjs_bar"></canvas>
                 </div>
             </div>
         </div>
